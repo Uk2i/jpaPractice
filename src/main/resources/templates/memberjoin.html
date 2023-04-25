@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>memberjoin</title>
+  <meta charset="UTF-8">
+  <title>memberjoin</title>
 </head>
 <body>
 
+<form action="/member/join" method="post">
+  이메일 : <input type="text" name="memberEmail" id="memberEmail"> <br>
+  <p id="check-result"></p>
+  비밀번호 : <input type="password" name="memberPassword"> <br>
+  이름 : <input type="text" name="memberName"> <br>
+  <input type="submit" value="회원가입">
+</form>
 </body>
 </html>

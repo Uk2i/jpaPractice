@@ -1,6 +1,6 @@
 package com.ukjpa.practice.controller;
 
-import com.ukjpa.practice.entity.Board;
+import com.ukjpa.practice.entity.BoardEntity;
 import com.ukjpa.practice.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,9 +23,9 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(Board board) {
+    public String boardWritePro(BoardEntity boardEntity) {
 
-        boardService.write(board);
+        boardService.write(boardEntity);
 
         return "redirect:/board/write";
     }
