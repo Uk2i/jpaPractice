@@ -27,13 +27,17 @@
 <body>
     <div class="layout">
         <h3>게시글 작성</h3>
-      <form action="/board/writepro" method="post">
+      <form action="/board/write" method="post">
+          <label> 작성자
+              <input type="text" name="boardWriter">
+          </label>
+          비밀번호 : <input type="text" name="boardPass">
           <label> 제목
-              <input type="text" name="title">
+              <input type="text" name="boardTitle">
           </label>
           <br>
           <label> 내용
-              <textarea name="content"></textarea>
+              <textarea name="boardContents"></textarea>
           </label>
 
           <button type="submit">작성</button>

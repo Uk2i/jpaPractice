@@ -6,10 +6,23 @@
 </head>
 <body>
 <h2>Hello Spring Boot!!</h2>
+<button onclick="saveReq()">글작성</button>
+<a href="/board/write">글작성 링크</a>
+<button onclick="listReq()">글목록</button>
+
 <a href="/member/join">회원가입</a>
 <a href="/member/login">로그인</a>
 <a href="/member/">회원목록</a>
 <a href="/board/write">게시판쓰기</a>
 <a th:if="${session.loginEmail}!=null" href="/member/myinfo">내정보보기</a>
 </body>
+<script>
+  function saveReq() {
+    location.href = "/board/write";
+  };
+
+  const listReq = () => {
+    location.href = "/board/list";
+  };
+</script>
 </html>
