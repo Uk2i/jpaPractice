@@ -21,7 +21,7 @@ public class BoardService {
     }
 
     public void write(BoardDTO boardDTO) {
-        boardRepository.save(BoardEntity.toBoardEntity(boardDTO));
+        boardRepository.save(BoardEntity.toSaveEntity(boardDTO));
     }
 
     public List<BoardDTO> findAll() {
@@ -40,5 +40,10 @@ public class BoardService {
         } else {
             return null;
         }
+    }
+
+    public BoardDTO update(BoardDTO boardDTO) {
+        boardRepository.save(BoardEntity.toUpdateEntity(boardDTO));
+        return findById(boardDTO.getId());
     }
 }
